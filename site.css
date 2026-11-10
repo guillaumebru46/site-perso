@@ -208,3 +208,8 @@ html:has(dialog[open]){overflow:hidden}
 .promise-title .line>span{text-wrap:balance}
 @media (min-width:621px) and (max-width:1100px){.hero-copy h1.promise-title{font-size:clamp(36px,4.9vw,52px)}}
 @media(max-width:620px){.hero-copy h1.promise-title{font-size:clamp(36px,10.2vw,48px);line-height:1.05}}
+
+/* Voyager : photo en famille, en bandeau */
+.family-photo{margin-bottom:56px}
+.family-photo>img{aspect-ratio:2/1;object-position:50% 38%}
+@media(max-width:620px){.family-photo{margin-bottom:36px}.family-photo>img{aspect-ratio:4/3;object-position:62% 45%}}
