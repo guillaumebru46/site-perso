@@ -104,7 +104,7 @@ body[data-page="home"] #home-title{font-size:clamp(58px,5.9vw,88px);line-height:
 .press-note{font-size:11px;color:#a89e91;letter-spacing:.02em;margin-top:6px}
 
 /* Chiffres clés */
-.key-figures{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line);margin:8px 0 34px}
+.key-figures{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin:8px 0 34px}
 .key-figures>div{padding:22px 0 20px 24px;border-left:1px solid var(--line)}
 .key-figures>div:first-child{padding-left:0;border-left:0}
 .key-figures strong{display:block;font:500 clamp(40px,3.6vw,54px)/1 var(--display);letter-spacing:-.03em;color:var(--ink)}
@@ -152,3 +152,7 @@ body[data-page="home"] #home-title{font-size:clamp(58px,5.9vw,88px);line-height:
 }
 @media(prefers-reduced-motion:reduce){.js .reveal,.js .reveal-photo>img,.js .hero h1 .line>span,.js .hairline,.js .reveal-photo>figcaption{opacity:1!important;transform:none!important;clip-path:none!important}.js .text-link{background-size:100% 1px}}
 .reveal-all .reveal,.reveal-all .reveal-photo>img,.reveal-all .hero h1 .line>span,.reveal-all .hairline,.reveal-all .reveal-photo>figcaption{opacity:1!important;transform:none!important;clip-path:none!important}
+
+/* Chiffres clés sur 2 lignes quand la colonne est étroite */
+@media(max-width:1100px){.key-figures{grid-template-columns:1fr 1fr}.key-figures>div:nth-child(3){padding-left:0;border-left:0}.key-figures>div:nth-child(n+3){border-top:1px solid var(--line)}}
+.sunset-photo>img{object-position:50% 22%}
