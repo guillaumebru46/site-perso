@@ -156,3 +156,43 @@ body[data-page="home"] #home-title{font-size:clamp(58px,5.9vw,88px);line-height:
 /* Chiffres clés sur 2 lignes quand la colonne est étroite */
 @media(max-width:1100px){.key-figures{grid-template-columns:1fr 1fr}.key-figures>div:nth-child(3){padding-left:0;border-left:0}.key-figures>div:nth-child(n+3){border-top:1px solid var(--line)}}
 .sunset-photo>img{object-position:50% 22%}
+
+/* Fenêtres vidéo et prise de rendez-vous */
+html:has(dialog[open]){overflow:hidden}
+.embed-modal{padding:0;border:1px solid #d5ad7240;border-radius:3px;overflow:hidden;box-shadow:0 40px 90px -30px #000c}
+.embed-modal::backdrop{background:#0b0908d9;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.embed-modal[open]{animation:embed-in .5s var(--ease-out)}
+.embed-modal[open]::backdrop{animation:embed-fade .4s var(--ease)}
+@keyframes embed-in{from{opacity:0;transform:translateY(14px) scale(.985)}}
+@keyframes embed-fade{from{opacity:0}}
+.embed-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-bottom:1px solid #ffffff14}
+.embed-bar .eyebrow{margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.embed-actions{display:flex;align-items:center;gap:6px}
+.embed-external{font-size:12px;padding:10px 12px;opacity:.75;white-space:nowrap}
+.embed-external:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.embed-close{width:44px;height:44px;border:0;background:transparent;font-size:22px;line-height:1;border-radius:50%;transition:background .2s}
+.embed-frame{position:relative}
+.embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .5s var(--ease)}
+.embed-modal.is-loaded iframe{opacity:1}
+.embed-loading{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;letter-spacing:.04em}
+/* Vidéo : écrin sombre */
+.embed-video{width:min(1100px,calc(100% - 32px));max-width:none;background:#0d0b09;color:var(--ivory)}
+.embed-video .eyebrow{color:var(--gold)}
+.embed-video .embed-close{color:var(--ivory)}
+.embed-video .embed-close:hover{background:#ffffff14}
+.embed-video .embed-frame{aspect-ratio:16/9;background:#000}
+.embed-video .embed-loading{color:#a89e91}
+/* Calendly : écrin clair */
+.embed-calendly{width:min(1040px,calc(100% - 32px));max-width:none;background:var(--ivory);color:var(--ink);border-color:var(--line)}
+.embed-calendly .embed-bar{border-bottom-color:var(--line)}
+.embed-calendly .embed-close{color:var(--ink)}
+.embed-calendly .embed-close:hover{background:#0000000d}
+.embed-calendly .embed-frame{height:min(760px,calc(100dvh - 120px))}
+.embed-calendly .embed-loading{color:var(--muted)}
+@media(max-width:620px){
+  .embed-calendly{width:100%;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0}
+  .embed-calendly .embed-frame{height:calc(100dvh - 65px)}
+  .embed-video{width:calc(100% - 20px)}
+  .embed-bar{padding-left:16px}
+  .embed-external{font-size:11px;padding:8px 6px}
+}

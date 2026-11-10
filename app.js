@@ -83,3 +83,52 @@ document.querySelectorAll('dialog').forEach(dialog=>dialog.addEventListener('cli
   window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
   update();
 })();
+
+/* Vidéo et prise de rendez-vous dans la page, sans quitter le site.
+   Les lecteurs externes ne se chargent qu'au clic du visiteur. */
+(()=>{
+  const CALENDLY='https://calendly.com/guillaume-bru/cae';
+  let lastFocus=null;
+  function buildModal(kind,title,externalUrl,externalLabel){
+    const d=document.createElement('dialog');
+    d.className='modal embed-modal embed-'+kind;
+    d.setAttribute('aria-label',title);
+    d.innerHTML='<div class="embed-bar"><span class="eyebrow"></span><span class="embed-actions"><a class="embed-external" target="_blank" rel="noopener noreferrer"></a><button class="embed-close" type="button" aria-label="Fermer">✕</button></span></div><div class="embed-frame"><p class="embed-loading">Chargement…</p></div>';
+    d.querySelector('.eyebrow').textContent=title;
+    const ext=d.querySelector('.embed-external');ext.href=externalUrl;ext.textContent=externalLabel+' ↗';
+    d.querySelector('.embed-close').addEventListener('click',()=>d.close());
+    d.addEventListener('click',e=>{if(e.target===d)d.close();});
+    d.addEventListener('close',()=>{d.remove();lastFocus?.focus?.();});
+    document.body.appendChild(d);
+    return d;
+  }
+  function open(kind,src,title,externalUrl,externalLabel){
+    lastFocus=document.activeElement;
+    const d=buildModal(kind,title,externalUrl,externalLabel);
+    const f=document.createElement('iframe');
+    f.src=src;f.title=title;f.loading='eager';
+    f.allow=kind==='video'?'autoplay; encrypted-media; picture-in-picture; fullscreen':'';
+    f.referrerPolicy='strict-origin-when-cross-origin';
+    if(kind==='video')f.allowFullscreen=true;
+    f.addEventListener('load',()=>d.classList.add('is-loaded'));
+    d.querySelector('.embed-frame').appendChild(f);
+    d.showModal();
+    d.querySelector('.embed-close').focus();
+  }
+  document.addEventListener('click',e=>{
+    if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    const v=e.target.closest('[data-video]');
+    if(v){
+      e.preventDefault();
+      const id=v.dataset.video;
+      open('video','https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1',v.dataset.videoTitle||'Vidéo','https://youtu.be/'+id,'Ouvrir sur YouTube');
+      return;
+    }
+    const c=e.target.closest('[data-calendly]');
+    if(c){
+      e.preventDefault();
+      const host=location.hostname||'guillaumebru.com';
+      open('calendly',CALENDLY+'?embed_domain='+encodeURIComponent(host)+'&embed_type=Inline&hide_gdpr_banner=1','Réserver un échange',CALENDLY,'Ouvrir dans Calendly');
+    }
+  });
+})();
