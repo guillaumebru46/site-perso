@@ -214,3 +214,12 @@ html:has(dialog[open]){overflow:hidden}
 .family-duo .family-photo>img{aspect-ratio:4/3;object-position:50% 50%}
 .family-duo .couple-photo>img{aspect-ratio:5/6;object-position:50% 42%}
 @media(max-width:620px){.family-duo{grid-template-columns:1fr;gap:28px;margin-bottom:36px}.family-duo .family-photo>img{aspect-ratio:4/3;object-position:62% 45%}.family-duo .couple-photo>img{aspect-ratio:4/5}}
+
+/* Mon histoire : intertitres, citation, photo qui reste visible */
+.story h3{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(26px,2.2vw,32px);line-height:1.15;color:var(--bronze);margin:42px 0 14px}
+.story p{margin-bottom:14px}
+.story-quote{margin:18px 0 22px;padding-left:22px;border-left:1px solid var(--gold)}
+.story-quote p{font-family:var(--display);font-size:clamp(26px,2.3vw,34px);line-height:1.2;color:var(--ink);margin:0}
+.story-end{margin-top:26px;color:var(--ink)}
+@media(min-width:821px){.about-grid{align-items:start}.about-grid .about-photo{position:sticky;top:110px}}
+@media(max-width:620px){.story h3{margin-top:34px}}
