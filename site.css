@@ -199,3 +199,6 @@ html:has(dialog[open]){overflow:hidden}
 .sunset-photo,.hero-light .hero-photo,.activity-hero-photo{box-shadow:none;outline:1px solid #d5ad7275;outline-offset:14px}
 .hero-light .hero-photo{outline-color:#b8996a80}
 @media(max-width:620px){.sunset-photo,.hero-light .hero-photo,.activity-hero-photo{outline-offset:9px}}
+
+/* Manifeste : coupure en trois lignes sur grand écran, coupure libre sur mobile */
+@media(max-width:620px){.manifesto .br-wide{display:none}}
