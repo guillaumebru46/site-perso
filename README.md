@@ -1,11 +1,11 @@
 # Site de Guillaume Bru
 
-Site statique prêt pour GitHub Pages. Les fichiers du site sont à la racine de cette archive.
+Site statique : `index.html`, `voyages.html`, `activite.html`, `site.css` et `app.js` à la racine ; images et polices dans `assets/`.
 
 ## Publication
 
-1. Décompresse cette archive dans un dépôt GitHub.
-2. Dans **Settings → Pages**, choisis **Deploy from a branch**, la branche `main` et le dossier `/ (root)`.
-3. Avant une mise en ligne publique, vérifie les liens, le domaine personnalisé et les paramètres d’indexation.
+Dans **Settings → Pages**, choisir **Deploy from a branch**, la branche `main` et le dossier `/ (root)`.
 
-Les pages contiennent actuellement `noindex,nofollow` et cela ne protège pas l’accès au site : une URL GitHub Pages publiée reste consultable par toute personne qui la connaît.
+Les pages autorisent désormais l’indexation. Vérifier l’adresse publique définitive avant d’ajouter les URL canoniques, le sitemap et les métadonnées sociales absolues. Ne pas utiliser `noindex` comme protection d’accès : ce site ne comporte aucune authentification.
+
+Les contacts ouvrent WhatsApp, Calendly ou Instagram. Aucun formulaire, outil de mesure d’audience, cookie de session ou jeton applicatif n’est géré par le site.

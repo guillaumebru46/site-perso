@@ -13,8 +13,13 @@
 
 /* Finition éditoriale : identité visible, portraits et lumière douce. */
 body[data-page="home"] #home-title{font-size:clamp(58px,5.9vw,88px);line-height:1.02}
-.personal-intro{align-items:center;padding-block:24px}.intro-person{display:flex;align-items:center;gap:20px;min-width:0}.intro-person>span:last-child{display:flex;flex-direction:column;gap:4px}.intro-person strong{color:var(--ivory);font-size:20px;font-family:var(--display);font-weight:500}.intro-person>span>span{color:#c7bcad;font-size:12px}.intro-portrait{width:76px;height:76px;flex:0 0 76px;border-radius:50%;overflow:hidden;border:1px solid #d5ad7266}.intro-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 16%;transform:scale(1.7);transform-origin:50% 21%}.intro-link{white-space:nowrap}.editorial-photo>img,.travel-hero-photo>img,.activity-hero-photo>img,.friends-panorama>img{filter:sepia(.045) saturate(.94)}
+.personal-intro{align-items:center;padding-block:24px}.intro-person{display:flex;align-items:center;gap:20px;min-width:0}.intro-person>span:last-child{display:flex;flex-direction:column;gap:4px}.intro-person strong{color:var(--ivory);font-size:20px;font-family:var(--display);font-weight:500}.intro-person>span>span{color:#c7bcad;font-size:12px}.intro-portrait{width:76px;height:76px;flex:0 0 76px;border-radius:50%;overflow:hidden;border:1px solid #d5ad7266}.intro-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 0%;transform:scale(1.7);transform-origin:50% 0%}.intro-link{white-space:nowrap}.editorial-photo>img,.travel-hero-photo>img,.activity-hero-photo>img,.friends-panorama>img{filter:sepia(.045) saturate(.94)}
 @media(max-width:620px){body[data-page="home"] #home-title{font-size:clamp(43px,11.8vw,70px)}.personal-intro{display:flex;flex-direction:column;align-items:flex-start;gap:16px}.intro-person{gap:14px}.intro-person>span>span{font-size:11px;max-width:210px}.intro-link{font-size:12px}.intro-portrait{width:64px;height:64px;flex-basis:64px}}
 
 .hero-copy .personal-intro{display:flex;align-items:center;gap:18px;border-top:1px solid #ffffff25;margin-top:30px;padding-top:22px;padding-bottom:0}.hero-copy .intro-link{display:none}.hero-copy .intro-person strong{font-size:23px}.hero-copy .intro-person>span>span{font-size:11px;max-width:250px}.hero-copy .intro-person{color:var(--ivory)}
-.intro-portrait img{object-position:50% 0%;transform-origin:50% 0%}
+
+
+/* Confort de lecture sur tablette et petit écran. */
+@media (min-width:621px) and (max-width:1100px){.hero-copy h1,.hero-light h1{font-size:clamp(40px,5.8vw,64px)}body[data-page="home"] #home-title{font-size:clamp(40px,5.8vw,64px)}}
+@media (max-width:360px){.hero-light h1{font-size:clamp(42px,16vw,56px)}}
+.footer-bottom p{font-size:12px}.plain-button{font-size:12px}
