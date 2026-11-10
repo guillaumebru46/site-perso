@@ -209,7 +209,8 @@ html:has(dialog[open]){overflow:hidden}
 @media (min-width:621px) and (max-width:1100px){.hero-copy h1.promise-title{font-size:clamp(36px,4.9vw,52px)}}
 @media(max-width:620px){.hero-copy h1.promise-title{font-size:clamp(36px,10.2vw,48px);line-height:1.05}}
 
-/* Voyager : photo en famille, en bandeau */
-.family-photo{margin-bottom:56px}
-.family-photo>img{aspect-ratio:2/1;object-position:50% 38%}
-@media(max-width:620px){.family-photo{margin-bottom:36px}.family-photo>img{aspect-ratio:4/3;object-position:62% 45%}}
+/* Voyager : en famille et à deux, côte à côte (même hauteur) */
+.family-duo{display:grid;grid-template-columns:4fr 2.5fr;gap:24px;margin-bottom:56px;align-items:start}
+.family-duo .family-photo>img{aspect-ratio:4/3;object-position:50% 50%}
+.family-duo .couple-photo>img{aspect-ratio:5/6;object-position:50% 42%}
+@media(max-width:620px){.family-duo{grid-template-columns:1fr;gap:28px;margin-bottom:36px}.family-duo .family-photo>img{aspect-ratio:4/3;object-position:62% 45%}.family-duo .couple-photo>img{aspect-ratio:4/5}}
