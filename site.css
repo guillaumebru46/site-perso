@@ -202,3 +202,9 @@ html:has(dialog[open]){overflow:hidden}
 
 /* Manifeste : coupure en trois lignes sur grand écran, coupure libre sur mobile */
 @media(max-width:620px){.manifesto .br-wide{display:none}}
+
+/* Page Entreprendre : la promesse en grand titre */
+.hero-copy h1.promise-title{font-size:clamp(50px,4.4vw,68px);line-height:1.04;max-width:13.5em}
+.promise-title .line>span{text-wrap:balance}
+@media (min-width:621px) and (max-width:1100px){.hero-copy h1.promise-title{font-size:clamp(36px,4.9vw,52px)}}
+@media(max-width:620px){.hero-copy h1.promise-title{font-size:clamp(36px,10.2vw,48px);line-height:1.05}}
