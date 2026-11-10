@@ -243,3 +243,5 @@ html:has(dialog[open]){overflow:hidden}
 
 /* Vignettes médias dans la palette */
 .media-visual{background:#17130f}
+
+@media(max-width:620px){.br-wide{display:none}}
