@@ -1,6 +1,6 @@
 # Site de Guillaume Bru
 
-Site statique : `index.html`, `voyages.html`, `activite.html`, `site.css` et `app.js` à la racine ; images et polices dans `assets/`.
+Site statique : `index.html`, `voyages.html`, `activite.html`, `histoire.html`, `site.css` et `app.js` à la racine ; images et polices dans `assets/`.
 
 ## Publication
 

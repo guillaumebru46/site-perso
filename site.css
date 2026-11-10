@@ -221,5 +221,25 @@ html:has(dialog[open]){overflow:hidden}
 .story-quote{margin:18px 0 22px;padding-left:22px;border-left:1px solid var(--gold)}
 .story-quote p{font-family:var(--display);font-size:clamp(26px,2.3vw,34px);line-height:1.2;color:var(--ink);margin:0}
 .story-end{margin-top:26px;color:var(--ink)}
-@media(min-width:821px){.about-grid{align-items:start}.about-grid .about-photo{position:sticky;top:110px}}
 @media(max-width:620px){.story h3{margin-top:34px}}
+
+/* Accueil : bouton sombre pour « Lire mon histoire » */
+.button-dark{background:var(--ink);color:var(--ivory)}
+.button-dark:hover{background:var(--bronze);color:var(--ivory)}
+#guillaume .button-dark{margin-top:10px}
+
+/* Page Mon histoire : une colonne de lecture */
+.story-page .story{max-width:680px;margin-inline:auto}
+.story-page .story>p{font-size:17px;line-height:1.8}
+.story-page .key-figures{margin-bottom:48px}
+.story-photo{margin:46px 0 10px}
+.story-photo>img{aspect-ratio:4/5;object-position:50% 30%}
+@media(max-width:620px){.story-page .story>p{font-size:16px}.story-photo{margin:34px 0 6px}}
+
+/* Voyager : photo du port en bandeau */
+.port-panorama{max-width:none}
+.port-panorama img{aspect-ratio:1600/656;object-fit:cover}
+@media(max-width:620px){.port-panorama img{aspect-ratio:4/3;object-position:50% 55%}}
+
+/* Vignettes médias dans la palette */
+.media-visual{background:#17130f}
