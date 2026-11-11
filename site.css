@@ -245,3 +245,8 @@ html:has(dialog[open]){overflow:hidden}
 .media-visual{background:#17130f}
 
 @media(max-width:620px){.br-wide{display:none}}
+
+/* Voyager : Travel Advantage */
+.ta-section{border-top:1px solid var(--line)}
+.ta-section .ta-note{font-size:13px;letter-spacing:.02em;color:var(--bronze);margin-top:10px}
+.ta-section .button{margin-top:14px}
