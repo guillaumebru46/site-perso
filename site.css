@@ -268,3 +268,6 @@ html:has(dialog[open]){overflow:hidden}
 @media(max-width:820px){.ta-grid{grid-template-columns:1fr;gap:56px}.pass-card{transform:rotate(-1.5deg)}}
 @media(max-width:620px){.pass-card{padding:24px 22px 0}.pass-stub{margin:20px -22px 0;padding:16px 22px 20px;font-size:10px;flex-direction:column;gap:4px}}
 @media(prefers-reduced-motion:no-preference){.pass-card{transition:transform .6s var(--ease-out)}.pass-card:hover{transform:rotate(0deg) translateY(-4px)}}
+
+.ta-steps{font-size:13px;line-height:1.7;color:var(--muted);max-width:30em;margin-top:16px}
+a.pass-card{display:block;text-decoration:none;color:var(--ivory);cursor:pointer}
