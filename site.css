@@ -271,3 +271,9 @@ html:has(dialog[open]){overflow:hidden}
 
 .ta-steps{font-size:13px;line-height:1.7;color:var(--muted);max-width:30em;margin-top:16px}
 a.pass-card{display:block;text-decoration:none;color:var(--ivory);cursor:pointer}
+
+/* Logo GB */
+.site-header .brand{display:inline-flex;align-items:center;gap:12px}
+.brand-mark{width:34px;height:auto;color:var(--gold,#d5ad72);flex:none}
+.monogram{height:auto}
+@media(max-width:620px){.brand-mark{width:28px}.site-header .brand{gap:9px}}
