@@ -1,5 +1,5 @@
 .accueil-video { position: relative; isolation: isolate; overflow: hidden; background: #121114; }
-.accueil-film { position: absolute; inset: 0 0 0 auto; height: 100%; width: 78%; object-fit: cover; object-position: 54% center; }
+.accueil-film { pointer-events: none; position: absolute; inset: 0 0 0 auto; height: 100%; width: 78%; object-fit: cover; object-position: 54% center; }
 .accueil-video::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg,#121114 16%,rgba(18,17,20,.96) 29%,rgba(18,17,20,.82) 40%,transparent 72%); }
 .accueil-video .hero-grid { display: flex; min-height: clamp(570px,78svh,860px); padding-block: 58px; }
 .accueil-video .hero-copy { position: relative; z-index: 1; width: min(51%,650px); }
@@ -7,7 +7,6 @@
 .accueil-video .hero-copy .hero-lead { font-size: 18px; margin-bottom: .4em; }
 .accueil-video .button,.accueil-video .quiet-link { display: inline-flex; justify-content: center; align-items: center; border-radius: 40px; padding: 14px 22px; min-height: 48px; }
 .accueil-video .quiet-link { border: 1px solid #b9ad96; margin-left: 6px; }
-.film-toggle { position: absolute; z-index: 2; bottom: 18px; right: 18px; width: 44px; height: 44px; border-radius: 50%; background: #17151bc9; color: white; border: 1px solid #ffffff60; cursor: pointer; }
 @media(max-width:720px) {
  .accueil-film { inset: 0 0 auto; width: 100%; height: clamp(330px,61svh,560px); object-position: 54% center; }
  .accueil-video::after { height: clamp(331px,calc(61svh + 1px),561px); background: linear-gradient(transparent 48%,#121114 100%); }
@@ -17,5 +16,4 @@
  .accueil-video .hero-copy .eyebrow { margin-bottom: 12px; }
  .accueil-video .hero-copy .hero-lead { font-size: 16px; }
  .accueil-video .button,.accueil-video .quiet-link { display: flex; width: 100%; margin-left: 0; }
- .film-toggle { top: 10px; bottom: auto; right: 10px; }
 }
