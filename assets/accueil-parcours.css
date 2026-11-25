@@ -1,0 +1,15 @@
+.home-story { background: linear-gradient(to bottom, #121114, var(--ivory) 100%) top / 100% clamp(44px,6vw,86px) no-repeat, var(--ivory); padding: clamp(94px,12vw,165px) 0 clamp(38px,5vw,72px); }
+.home-story-copy { max-width: 790px; margin-inline: auto; }
+.home-story h2,.home-doors h2 { font-size: clamp(2.35rem,4.9vw,4.8rem); line-height: 1.06; margin: .3em 0 .45em; }
+.home-story p { max-width: 64ch; margin: 0 0 1em; }
+.home-story .text-link { margin-top: .35em; }
+.home-doors { padding-block: clamp(24px,4vw,60px) clamp(54px,8vw,110px); }
+.home-door-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(20px,3vw,44px); }
+.home-door { display: block; background: #fffaf3; color: var(--ink); border: 1px solid var(--line); overflow: hidden; border-radius: 12px; }
+.home-door img { display: block; width: 100%; height: auto; aspect-ratio: 1.7; object-fit: cover; object-position: 50% 33%; }
+.home-door > div { padding: clamp(20px,3vw,36px); }
+.home-door h3 { font-size: clamp(1.75rem,3vw,2.7rem); margin: 0 0 .3em; }
+.home-door p { margin: 0 0 1em; }
+.home-door-link { font-weight: 600; text-decoration: underline; text-underline-offset: .22em; }
+.home-story,.home-doors,#entreprendre { scroll-margin-top: 88px; }
+@media(max-width:700px) { .home-door-grid { grid-template-columns: 1fr; } }
