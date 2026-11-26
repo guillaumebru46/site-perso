@@ -17,3 +17,9 @@
  .accueil-video .hero-copy .hero-lead { font-size: 16px; }
  .accueil-video .button,.accueil-video .quiet-link { display: flex; width: 100%; margin-left: 0; }
 }
+
+.accueil-film-mobile { display: none; }
+@media (max-width:720px), (hover:none) and (pointer:coarse) {
+  .accueil-video video { display: none; }
+  .accueil-film-mobile { display: block; }
+}
