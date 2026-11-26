@@ -17,3 +17,6 @@
   .signature-gb img { width: 32px; height: 35px; }
   .site-header .brand.signature-gb > span { display: block; font-size: 21px; }
 }
+
+footer .brand.signature-gb { display: inline-flex; align-items: center; gap: 10px; }
+footer .signature-gb > span { display: block; line-height: 1.05; }
