@@ -44,3 +44,15 @@ footer a[href="creation-de-sites.html"]:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
+
+footer a.creation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .65em;
+  min-height: 44px;
+  margin: .35rem 0 .65rem;
+  padding: .25rem .9rem;
+  border: 1px solid #bc9a65;
+  border-radius: 6px;
+  font-weight: 600;
+}
