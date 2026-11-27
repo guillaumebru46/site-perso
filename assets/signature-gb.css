@@ -25,3 +25,22 @@ footer .signature-gb > span { display: block; line-height: 1.05; }
 .manifesto-brand img { width: clamp(46px, 5vw, 58px); height: auto; }
 .manifesto-brand > span { font-family: var(--display); font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
 .manifesto-brand > span::after { margin-top: 8px; }
+
+/* Lien de création dans les crédits du site */
+footer a[href="creation-de-sites.html"] {
+  display: inline-block;
+  padding-block: .25em;
+  color: #dfba7f;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+}
+footer a[href="creation-de-sites.html"]:hover,
+footer a[href="creation-de-sites.html"]:focus-visible {
+  color: #fff1cd;
+  text-decoration-thickness: 2px;
+}
+footer a[href="creation-de-sites.html"]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
