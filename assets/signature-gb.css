@@ -20,3 +20,8 @@
 
 footer .brand.signature-gb { display: inline-flex; align-items: center; gap: 10px; }
 footer .signature-gb > span { display: block; line-height: 1.05; }
+
+.manifesto-brand { display: grid; justify-items: center; gap: 8px; margin-bottom: 26px; }
+.manifesto-brand img { width: clamp(46px, 5vw, 58px); height: auto; }
+.manifesto-brand > span { font-family: var(--display); font-size: 18px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.manifesto-brand > span::after { margin-top: 8px; }
